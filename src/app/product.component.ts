@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import { Product } from './product.model';
 import { ProductRepository } from './repository.model';
 
 @Component({
@@ -8,6 +9,10 @@ import { ProductRepository } from './repository.model';
 })
 export class ProductComponent{
 
+    //yeni bir "property" tanımlanıp ona bir nesne atandı.
     model: ProductRepository = new ProductRepository();
+
+    //atanan nesne üzerinden metota ulaşabildik
+    product: Product = this.model.getProductById(1);
 
 }
