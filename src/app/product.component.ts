@@ -39,5 +39,14 @@ export class ProductComponent {
         }
     }
 
+    onSubmit($event){
+        $event.stopPropagation();
+        console.log("button was clicked")
+        console.log($event);
+    }
+
+    onDivClicked(){
+        console.log("div was clicked")
+    }
 
 }
